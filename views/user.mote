@@ -1,0 +1,24 @@
+<h1>Registration</h1>
+    <form action="user_reply.html" method="GET">
+      <fieldset>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+      </fieldset>
+      <fieldset>
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email">
+      </fieldset>
+      <fieldset>
+        <label for="pass">Password</label>
+        <input id="pass" type="password" name="pass">
+      </fieldset>
+      <fieldset>
+        <label for="date">Date</label>
+        <input id="date" type="date" name="date">
+      </fieldset>
+      <fieldset>
+        <label for="time">How many time you suffer from migraine</label>
+        <input id="time" type="number" name="time">
+      </fieldset>
+      <br>
+      <input type="submit" value="Send">
