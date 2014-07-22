@@ -1,83 +1,83 @@
 <h1>Migraine tracker - Input</h1>
-    <fieldset>
-      <label for="date">Date of migraine?</label>
-      <input id="date" type="date" name="date" placeholder="date">
-    </fieldset>
-    <fieldset>
-      <label for="time">What time did it start?</label>
-      <input id="time" type="time" name="time" placeholder="Time in hours">
-    </fieldset>
-    <fieldset>
-      <label>How long did it last?</label>
-      <input type="number" name="longtime" placeholder="Time in hours">
-      <label>All the day</label>
-      <input type="checkbox" name="checkbox">
-    </fieldset>
-    <fieldset>
-      <label>On a scale of 1 to 10 How intense  was the pain?</label>
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <label>Location of pain?</label>
-      <select>
-        <option>Left side</option>
-        <option>Right side</option>
-        <option>Both side</option>
-        <option>Front side</option>
-        <option>Back side</option>
-        <option>Around the eyes</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <label>Did you take any medication?</label>
-      <select>
-        <option>Exedrin</option>
-        <option>Migradodixina</option>
-        <option>Tonopan</option>
-        <option>Panadol</option>
-        <option>Ergotamina</option>
-      </select>
-      <input type="number" name="add" placeholder="Enter dosage">
-      <label>+</label>
-      <input id="medication" type="text" name="medication" placeholder="Add new">
-      <input type="submit" value="Add">
-    </fieldset>
-    <fieldset>
-      <label>Did you skip any meals?</label>
-      <br>
-      <label>Breackfast</label>
-      <input type="checkbox" name="Breackfast">
-      <label>Lunch</label>
-      <input type="checkbox" name="Lunch">
-      <label>Dinner</label>
-      <input type="checkbox" name="Dinner">
-    </fieldset>
-    <fieldset>
-      <label for="meals">You have eaten or drinked any special meal or something out of the ordinary</label>
-      <select>
-      <option>Alcoholic beverages</option>
-      <option>Cheese</option>
-      <option>Chocolate</option>
-      <option>Cofee or tea</option>
-      <option>Cofee or tea</option>
-      <option>Spicy foods</option>
-      </select>
-      <input id="meals" type="text" name="meals" placeholder="Add new">
-      <input type="submit" value="Add">
-    </fieldset>
-    <fieldset>
-      <textarea name="comentario">Add any comment</textarea>
-      <br>
-      <input type="submit" value="Send">
-    </fieldset>
+  <fieldset>
+    <label for="date">Date of migraine?</label>
+    <input id="date" type="date" name="date" placeholder="date">
+  </fieldset>
+  <fieldset>
+    <label for="time">What time did it start?</label>
+    <input id="time" type="time" name="time" placeholder="Time in hours">
+  </fieldset>
+  <fieldset>
+    <label>How long did it last?</label>
+    <input type="number" name="longtime" placeholder="Time in hours">
+    <label>All the day</label>
+    <input type="checkbox" name="checkbox">
+  </fieldset>
+  <fieldset>
+    <label>On a scale of 1 to 10 How intense  was the pain?</label>
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label>Location of pain?</label>
+    <select>
+      <option>Left side</option>
+      <option>Right side</option>
+      <option>Both side</option>
+      <option>Front side</option>
+      <option>Back side</option>
+      <option>Around the eyes</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label>Did you take any medication?</label>
+    <select>
+      <option>Exedrin</option>
+      <option>Migradodixina</option>
+      <option>Tonopan</option>
+      <option>Panadol</option>
+      <option>Ergotamina</option>
+    </select>
+    <input type="number" name="add" placeholder="Enter dosage">
+    <label>+</label>
+    <input id="medication" type="text" name="medication" placeholder="Add new">
+    <input type="submit" value="Add">
+  </fieldset>
+  <fieldset>
+    <label>Did you skip any meals?</label>
+    <br>
+    <label>Breackfast</label>
+    <input type="checkbox" name="Breackfast">
+    <label>Lunch</label>
+    <input type="checkbox" name="Lunch">
+    <label>Dinner</label>
+    <input type="checkbox" name="Dinner">
+  </fieldset>
+  <fieldset>
+    <label for="meals">You have eaten or drinked any special meal or something out of the ordinary</label>
+    <select>
+    <option>Alcoholic beverages</option>
+    <option>Cheese</option>
+    <option>Chocolate</option>
+    <option>Cofee or tea</option>
+    <option>Cofee or tea</option>
+    <option>Spicy foods</option>
+    </select>
+    <input id="meals" type="text" name="meals" placeholder="Add new">
+    <input type="submit" value="Add">
+  </fieldset>
+  <fieldset>
+    <textarea name="comentario">Add any comment</textarea>
+    <br>
+    <input type="submit" value="Send">
+  </fieldset>

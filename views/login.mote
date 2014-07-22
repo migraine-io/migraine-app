@@ -1,27 +1,27 @@
 <div id="login">
-			<h1>Login</h1>
-			<fieldset>
-				<form action="loginin.html" method="GET">
-					<!-- <fieldset> -->
-						<label for="user">Email</label>
-						<input id="user" type="text" name="user">
-						<label for="password">Password</label>
-						<input id="password" type="password" value="pass">
-					<!-- </fieldset> -->
-					<input type="submit" value="send">
-				</form>
-			</fieldset>
-		</div>
-		<br>
-		<br>
-		<div id="password">
-			<h1>Forgot your password?</h1>
+	<h1>Login</h1>
+	<fieldset>
+		<form action="loginin.html" method="GET">
+			<!-- <fieldset> -->
+				<label for="user">Email</label>
+				<input id="user" type="text" name="user">
+				<label for="password">Password</label>
+				<input id="password" type="password" value="pass">
+			<!-- </fieldset> -->
+			<input type="submit" value="send">
+		</form>
+	</fieldset>
+</div>
+<br>
+<br>
+<div id="password">
+	<h1>Forgot your password?</h1>
 
-			<fieldset>
-			<p>Enter your email address:<p>
-			<form action="forgotpass_reply.html" "method=GET">
-				<input type="text" name="mail">
-				<input type="submit" value="Send">
-			</form>
-			</fieldset>
-		</div>
+	<fieldset>
+	<p>Enter your email address:<p>
+	<form action="forgotpass_reply.html" "method=GET">
+		<input type="text" name="mail">
+		<input type="submit" value="Send">
+	</form>
+	</fieldset>
+</div>
