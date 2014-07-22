@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ params[:title] }}</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/  migraine.css">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
