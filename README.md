@@ -7,6 +7,6 @@ $ gem install mote-render
 $ rackup config.ru
 ```
 
-Go to http://localhost:9292 and that’s it!
+Go to http://localhost:9292
 
-Requieres Version Ruby 2.1
+Required Ruby 2.1.x
