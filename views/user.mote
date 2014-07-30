@@ -1,25 +1,25 @@
 <h1>Registration</h1>
-  <form action="user_reply.html" method="GET">
+  <form action="/user" method="POST">   <!--user_reply.html -->
     <fieldset>
       <label for="name">Name</label>
-      <input id="name" type="text" name="name">
+      <input id="name" type="text" name="user[name]">
     </fieldset>
     <fieldset>
       <label for="email">Email</label>
-      <input id="email" type="text" name="email">
+      <input id="email" type="text" name="user[email]">
     </fieldset>
     <fieldset>
       <label for="pass">Password</label>
-      <input id="pass" type="password" name="pass">
+      <input id="pass" type="password" name="user[password]">
     </fieldset>
-    <fieldset>
+    <!-- <fieldset>
       <label for="date">Date</label>
       <input id="date" type="date" name="date">
     </fieldset>
     <fieldset>
       <label for="time">How many time you suffer from migraine</label>
       <input id="time" type="number" name="time">
-    </fieldset>
+    </fieldset> -->
     <br>
     <input type="submit" value="Send">
   </form>

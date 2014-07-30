@@ -79,5 +79,7 @@
   <fieldset>
     <textarea name="comentario">Add any comment</textarea>
     <br>
+  </fieldset>
+  <fieldset>
     <input type="submit" value="Send">
   </fieldset>

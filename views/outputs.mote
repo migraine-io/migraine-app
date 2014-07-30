@@ -1,4 +1,5 @@
 <h1>Migraine tracker - Output</h1>
+<form action="/outputs" method="POST">
   <fieldset>
     <label>Are you experiencing any menstrual or pre-menstrual symptoms?</label>
     <br>
@@ -52,5 +53,8 @@
   <fieldset>
     <textarea name="Comment">Add any comment</textarea>
     <br>
+  </fieldset>
+  <fieldset>
     <input type="submit" value="Send">
   </fieldset>
+</form>

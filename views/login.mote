@@ -6,7 +6,7 @@
 				<label for="user">Email</label>
 				<input id="user" type="text" name="user">
 				<label for="password">Password</label>
-				<input id="password" type="password" value="pass">
+				<input id="password" type="password">
 			<!-- </fieldset> -->
 			<input type="submit" value="send">
 		</form>
