@@ -38,8 +38,8 @@ Cuba.define do
     end
   end
 
-  on("inputs") do
-    render("inputs", title: "inputs")
+  on("inputs/inputs") do
+    render("inputs/inputs", title: "inputs")
   end
 
 on("outputs") do

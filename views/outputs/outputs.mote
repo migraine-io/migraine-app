@@ -3,15 +3,15 @@
 <form action="/#####" method="GET">
   <fieldset>
     <label for="date">Date</label>
-    <input type="date" name="output[date]">
+    <input type="date" name="outputs[date]">
   </fieldset>
   <fieldset>
     <label for="pain_scale">Scale of pain</label>
-    <input type="number" name="output[pain_scale]">
+    <input type="number" name="outputs[pain_scale]">
   </fieldset>
   <fieldset>
     <label for="duration">Duration</label>
-    <input type="number" name="output[duration]">
+    <input type="number" name="outputs[duration]">
   </fieldset>
   <fieldset>
     <textarea name="Comment" rows="8" cols="40">Add any comment</textarea>
