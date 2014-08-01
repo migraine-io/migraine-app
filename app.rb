@@ -16,14 +16,14 @@ Cuba.use Rack::Static,
 
 Cuba.define do
   on(root) do
-    render("index", title: "Hola")
+    render("index", title: "Migraine App")
   end
 
   on("login") do
     render("login", title: "Login")
   end
 
-  on "user" do #if ruta == user
+  on("user") do #if ruta == user
     on post, param("user") do |params| #if method == "POST"
       sign_up = SignUp.new(params)
 
@@ -34,20 +34,24 @@ Cuba.define do
     end
 
     on default do
-      render("user")
+      render("user", title: "User")
     end
   end
 
-  on("user") do
-    render("user", title: "User")
-  end
-
   on("inputs") do
-    render("inputs", title: "Inputs")
+    render("inputs", title: "inputs")
   end
 
   on("outputs") do
-    render("outputs", title: "Outputs")
+    on post, param("output") do |params|
+      raise params.to_s
+      # Output.create(params)
+      res.redirect("/dashboard")
+    end
+
+    on default do
+      render("outputs", title: "outputs")
+    end
   end
 
   on("dashboard") do
