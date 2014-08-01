@@ -1,31 +1,20 @@
 <h1>Migraine tracker - Output</h1>
-<form action="output.html" method="GET">
 
-</form>
-
-
-
-<fieldset>
-  <form action="loginin.html" method="GET">
-    <!-- <fieldset> -->
-      <label for="user">Email</label>
-      <input id="user" type="text" name="user">
-      <label for="password">Password</label>
-      <input id="password" type="password">
-    <!-- </fieldset> -->
+<form action="/#####" method="GET">
+  <fieldset>
+    <label for="date">Date</label>
+    <input type="date" name="output[date]">
+  </fieldset>
+  <fieldset>
+    <label for="pain_scale">Scale of pain</label>
+    <input type="number" name="output[pain_scale]">
+  </fieldset>
+  <fieldset>
+    <label for="duration">Duration</label>
+    <input type="number" name="output[duration]">
+  </fieldset>
+  <fieldset>
+    <textarea name="Comment" rows="8" cols="40">Add any comment</textarea>
+  </fieldset>
     <input type="submit" value="send">
-  </form>
-</fieldset>
-</div>
-<br>
-<br>
-<div id="password">
-<h1>Forgot your password?</h1>
-
-<fieldset>
-<p>Enter your email address:<p>
-<form action="forgotpass_reply.html" "method=GET">
-  <input type="text" name="mail">
-  <input type="submit" value="Send">
 </form>
-</fieldset>

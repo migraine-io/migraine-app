@@ -42,17 +42,9 @@ Cuba.define do
     render("inputs", title: "inputs")
   end
 
-  on("outputs") do
-    on post, param("output") do |params|
-      raise params.to_s
-      # Output.create(params)
-      res.redirect("/dashboard")
-    end
-
-    on default do
-      render("outputs", title: "outputs")
-    end
-  end
+on("outputs") do
+  render("outputs", title: "outputs")
+end
 
   on("dashboard") do
     render("dashboard", title: "Dashboard")
