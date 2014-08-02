@@ -1,0 +1,7 @@
+<a href="/inputs/new">New Input</a>
+
+<ul>
+  % params[:inputs].each do |input|
+    <li><a href="/inputs/{{ input.id }}">{{ input.type.category }} - {{ input.type.name }}</a></li>
+  % end
+</ul>

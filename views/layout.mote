@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="/css/migraine.css">
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="/inputs">Inputs</a></a></li>
+        <li><a href="/outputs">Outputs</a></a></li>
+        <li><a href="/types">Types</a></a></li>
+        <li><a href="/dashboard">Dashboard</a></a></li>
+        <li><a href="/users">Users</a></a></li>
+      </ul>
+    </nav>
+
     {{ content }}
   </body>
 </html>

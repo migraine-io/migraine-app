@@ -1,0 +1,15 @@
+<h1>Types</h1>
+
+<form action="/types" method="POST">
+  <fieldset>
+    <label for="type[category]">Category</label>
+    <input type="text" name="type[category]">
+  </fieldset>
+
+  <fieldset>
+    <label for="type[name]">Name</label>
+    <input type="text" name="type[name]">
+  </fieldset>
+
+  <input type="submit" value="Save">
+</form>

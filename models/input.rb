@@ -1,8 +1,7 @@
-class Output < Ohm::Model
+class Input < Ohm::Model
   reference :user, :User
+  reference :type, :Type
 
   attribute :happened_at
-  attribute :duration
-  attribute :scale
   attribute :comment
 end

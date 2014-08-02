@@ -1,0 +1,25 @@
+<h1>Migraine tracker - Inputs</h1>
+
+<form action="/#####" method="GET">
+  <fieldset>
+    <label for="date">Date</label>
+    <input type="date" name="input[date]">
+  </fieldset>
+  <fieldset>
+    <label for="types">Types</label>
+    <select name="input[type]">
+      % params[:types].group_by { |type| type.category }.each do |category, types|
+        <optgroup label="{{ category }}">
+          % types.each do |type|
+            <option value="{{ type.id }}">{{ type.name }}</option>
+          % end
+        </optgroup>
+      % end
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="comment">Comment</label>
+    <input type="number" name="input[comment]">
+  </fieldset>
+    <input type="submit" value="send">
+</form>

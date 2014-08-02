@@ -1,18 +1,1 @@
-<div class="wrapper">
-	<nav>
-		<ul>
-			<li><a href="http://migraine.io">Migraine.io</a></li>
-			<li><a href="login">Login</a></li>
-			<li><a href="user">User</a></li>
-			<li><a href="inputs">Inputs</a></li>
-			<li><a href="outputs">Outputs</a></li>
-			<li><a href="dashboard">Dashboard</a></li>
-		</ul>
-	</nav>
-	<br>
-	<br>
-	<br>
-	<h1>The Migraine App</h1>
-	<br>
-	<p>This is my Web App</p>
-	</div>
+<p>Landing page goes here.</p>
