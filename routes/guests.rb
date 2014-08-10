@@ -1,9 +1,5 @@
 class Guests < Cuba
   define do
-    on(root) do
-      render("index", title: "Home")
-    end
-
     on("login") do
       render("login", title: "Login")
     end

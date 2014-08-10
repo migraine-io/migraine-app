@@ -1,5 +1,5 @@
 <h1>Registration</h1>
-  <form action="/signup" method="POST">   
+  <form action="/signup" method="POST">
     <fieldset>
       <label for="name">Name</label>
       <input id="name" type="text" name="user[name]">
@@ -10,6 +10,10 @@
     </fieldset>
     <fieldset>
       <label for="pass">Password</label>
+      <input id="pass" type="password" name="user[password]">
+    </fieldset>
+    <fieldset>
+      <label for="pass">Confirm Password</label>
       <input id="pass" type="password" name="user[password]">
     </fieldset>
     <br>

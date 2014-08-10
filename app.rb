@@ -31,36 +31,7 @@ Cuba.define do
     run(Guests)
   end
 
-  on("inputs") do
-    on("new") do
-      render("inputs/new", title: "New Input", types: Type.all.to_a)
-    end
-
-    on get do
-      render("inputs/index", title: "Inputs", inputs: Input.all.to_a)
-    end
-  end
-
-  on("types") do
-    on("new") do
-      render("types/new", title: "New Type")
-    end
-
-    on get do
-      render("types/index", title: "Types", types: Type.all.to_a)
-    end
-
-    on post, param("type") do |params|
-      create_type = CreateType.new(params)
-
-      if create_type.valid?
-        Type.create(create_type.slice(:category, :name))
-        res.redirect("/types")
-      end
-    end
-  end
-
-  on("outputs") do
-    render("outputs/new", title: "outputs")
+  on(root) do
+    render("index", title: "Home")
   end
 end
