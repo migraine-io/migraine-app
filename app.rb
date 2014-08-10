@@ -23,15 +23,15 @@ Cuba.use Rack::Static,
   root: File.expand_path("./public", __dir__)
 
 Cuba.define do
+  on(root) do
+    render("index", title: "Home")
+  end
+
   on authenticated(User) do
     run(Users)
   end
 
   on default do
     run(Guests)
-  end
-
-  on(root) do
-    render("index", title: "Home")
   end
 end
