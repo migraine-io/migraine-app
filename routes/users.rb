@@ -1,4 +1,4 @@
-class Guests < Cuba
+class Users < Cuba
   define do
     on("dashboard") do
       render("dashboard", title: "Dashboard")
