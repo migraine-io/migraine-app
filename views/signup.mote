@@ -12,10 +12,6 @@
       <label for="pass">Password</label>
       <input id="pass" type="password" name="user[password]">
     </fieldset>
-    <fieldset>
-      <label for="pass">Confirm Password</label>
-      <input id="pass" type="password" name="user[password]">
-    </fieldset>
     <br>
     <input type="submit" value="Send">
   </form>
