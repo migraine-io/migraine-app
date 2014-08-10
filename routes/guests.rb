@@ -9,6 +9,10 @@ class Guests < Cuba
 
           res.redirect("/dashboard")
         end
+
+        on default do
+          render("login", title: "Login")
+        end
       end
 
       on default do
@@ -27,11 +31,17 @@ class Guests < Cuba
 
           res.redirect("/dashboard")
         end
+
+        on default do
+          render("signup", title: "Sign Up")
+        end
       end
 
       on default do
         render("signup", title: "Sign Up")
       end
+
     end
+
   end
 end
