@@ -12,6 +12,6 @@ class User < Ohm::Model
   unique :email
 
   def self.fetch(email)
-    User.with(:email, email)
+    with(:email, email)
   end
 end
