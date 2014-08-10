@@ -16,17 +16,19 @@ $ gem install mote
 $ gem install mote-render
 $ gem install ohm
 $ gem install scrivener
+$ gem install shotgun
+$ gem install shield
 ```
 
 ### 3. Start the server
 
 ```bash
-$ rackup config.ru
+$ make server
 ```
 
 ### 4. Done!
 
-Go to [http://localhost:9292](http://localhost:9292)
+Go to [http://localhost:9393](http://localhost:9393)
 
 
 **Requires Ruby 2.1+**
