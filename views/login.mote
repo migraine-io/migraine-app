@@ -1,12 +1,12 @@
 <div id="login">
 	<h1>Login</h1>
 	<fieldset>
-		<form action="loginin.html" method="GET">
+		<form action="/login" method="POST">
 			<!-- <fieldset> -->
-				<label for="user">Email</label>
-				<input id="user" type="text" name="user">
-				<label for="password">Password</label>
-				<input id="password" type="password">
+				<label for="user[email]">Email</label>
+				<input type="text" name="user[email]">
+				<label for="user[password]">Password</label>
+				<input type="password" name="user[password]">
 			<!-- </fieldset> -->
 			<input type="submit" value="send">
 		</form>
