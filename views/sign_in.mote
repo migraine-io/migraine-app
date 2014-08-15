@@ -1,0 +1,24 @@
+<div id="sign_in">
+	<h2>Sign In</h2>
+	<form action="/sign_in" method="POST">
+		<fieldset>
+			<label for="user[email]">Email</label>
+			<input type="text" name="user[email]">
+			<label for="user[password]">Password</label>
+			<input type="password" name="user[password]">
+		</fieldset>
+			<input type="submit" value="send">
+	</form>
+</div>
+<br>
+<br>
+<div id="password">
+	<h2>Forgot your password?</h2>
+	<form action="forgotpass_reply.html" "method=GET">
+		<fieldset>
+			<label>Enter your email address:</label>
+			<input type="text" name="mail">
+		</fieldset>
+			<input type="submit" value="Send">
+	</form>
+</div>

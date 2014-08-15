@@ -1,6 +1,6 @@
 class Guests < Cuba
   define do
-    on("login") do
+    on("sign_in") do
       on post, param("user") do |params|
         user = User.authenticate(params["email"],  params["password"])
 
@@ -11,16 +11,16 @@ class Guests < Cuba
         end
 
         on default do
-          render("login", title: "Login")
+          render("sign_in", title: "Sign In")
         end
       end
 
       on default do
-        render("login", title: "Login")
+        render("sign_in", title: "Sign In")
       end
     end
 
-    on("signup") do
+    on("sign_up") do
       on post, param("user") do |params|
         sign_up = SignUp.new(params)
 
@@ -33,12 +33,12 @@ class Guests < Cuba
         end
 
         on default do
-          render("signup", title: "Sign Up")
+          render("sign_up", title: "Sign Up", signup: sign_up)
         end
       end
 
       on default do
-        render("signup", title: "Sign Up")
+        render("sign_up", title: "Sign Up", signup: SignUp.new({}))
       end
 
     end
