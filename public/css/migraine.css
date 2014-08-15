@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#migraine-logo path {
+  color: white;
+}
+
+h2 {
+  margin: 0, 15;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  color: white;
+}
+
+header h1 {
+  margin: 0px;
+  padding: 10px 60px;
+  background: transparent url("/img/icon.png") 10px 10px no-repeat;
+  background-size: 40px;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  float: left;
+  list-style: none;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-right: 2px solid white;
+}
+
+header nav ul li:last-child {
+  border-right: none;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+form {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: 20px;
+}
+
+form input[type="submit"] {
+	border: none;
+  background-color: #8585AD;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+}
+
+form input[type="text"], form input[type="password"] {
+  border: none;
+  width: 100%;
+  background-color: #8585AD;
+  color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+fieldset label {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  line-height: 22px;
+}
