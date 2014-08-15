@@ -75,7 +75,7 @@ form {
 
 form input[type="submit"] {
 	border: none;
-  background-color: #8585AD;
+  background-color: #373857;
   color: white;
   padding: 5px 10px;
   font-size: 14px;
@@ -90,7 +90,7 @@ form input[type="submit"] {
 form input[type="text"], form input[type="password"] {
   border: none;
   width: 100%;
-  background-color: #8585AD;
+  background-color: rgba(136, 138, 176, 0.33);
   color: black;
   padding: 5px 10px;
   font-size: 14px;
