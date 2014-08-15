@@ -1,0 +1,34 @@
+<h2>Sign Up</h2>
+
+% signup = params[:signup]
+
+% errors = signup.errors
+% if errors
+  % if errors[:name].include?(:not_present)
+  <p>name is no present.</p>
+  % end
+
+  % if errors[:email].include?(:not_email)
+  <p>email is not valid.</p>
+  % end
+
+  % if errors[:password].include?(:not_present)
+  <p>password is not valid.</p>
+  % end
+
+  % if errors[:email].include?(:not_unique)
+  <p>Email has been registered.</p>
+  % end
+% end
+
+  <form action="/sign_up" method="POST">
+    <fieldset>
+      <label for="name">Name</label>
+      <input id="name" type="text" name="user[name]" value="{{ signup.name }}">
+      <label for="email">Email</label>
+      <input id="email" type="text" name="user[email]" value="{{ signup.email }}">
+      <label for="pass">Password</label>
+      <input id="pass" type="password" name="user[password]">
+    </fieldset>
+    <input type="submit" value="Send">
+  </form>
