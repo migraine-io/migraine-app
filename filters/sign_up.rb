@@ -5,7 +5,12 @@ class SignUp < Scrivener
 
   def validate
     assert_present :name
-    assert_email   :email
+
+    if assert_email :email
+      user = User.fetch(email)
+      assert(user.nil?, [:email, :not_unique])
+    end
+
     assert_present :password
   end
 end
