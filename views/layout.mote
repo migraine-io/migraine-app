@@ -3,19 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>{{ params[:title] }}</title>
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/migraine.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/inputs">Inputs</a></a></li>
-        <li><a href="/outputs">Outputs</a></a></li>
-        <li><a href="/types">Types</a></a></li>
-        <li><a href="/dashboard">Dashboard</a></a></li>
-        <li><a href="/users">Users</a></a></li>
-      </ul>
-    </nav>
+    <header>
+      % if app.authenticated(User)
+
+        <h1><a href="/dashboard">migraine.io</a></h1>
+        <nav>
+          <ul>
+            <li><a href="/inputs">Inputs</a></a></li>
+            <li><a href="/outputs">Outputs</a></a></li>
+            <li><a href="/profile">Profile</a></a></li>
+            <li><a href="/sign_out">Sign Out</a></a></li>
+          </ul>
+        </nav>
+
+      % else
+        <h1><a href="/">migraine.io</a></h1>
+        <nav>
+          <ul>
+            <li><a href="/sign_up">Sign Up</a></a></li>
+            <li><a href="/sign_in">Sign In</a></a></li>
+          </ul>
+        </nav>
+
+      % end
+    </header>
+
 
     {{ content }}
   </body>
