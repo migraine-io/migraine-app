@@ -4,7 +4,7 @@ class Users < Cuba
       render("dashboard", title: "Dashboard")
     end
 
-    on("logout") do
+    on("sign_out") do
       logout(User)
       res.redirect("/")
     end
