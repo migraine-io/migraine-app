@@ -13,6 +13,10 @@ h2 {
   text-align: center;
 }
 
+li a {
+  color: #373857;
+}
+
 header {
   position: relative;
   background-color: black;
@@ -85,9 +89,12 @@ form input[type="submit"] {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -webkit-appearance: none;
+  margin-top: 11px;
 }
 
-form input[type="text"], form input[type="password"] {
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
   border: none;
   width: 100%;
   background-color: rgba(136, 138, 176, 0.33);
@@ -114,4 +121,25 @@ fieldset label {
   text-transform: uppercase;
   display: block;
   line-height: 22px;
+  margin-top: 11px;
+}
+
+#dashboard {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+select {
+  border: none;
+  width: 20%;
+  background-color: rgba(136, 138, 176, 0.33);
+  color: black;
+  font-size: 14px;
+  border-radius: 3px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#sign_in {
+  margin-bottom: 44px;
 }
