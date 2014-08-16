@@ -3,9 +3,23 @@
 <form action="/#####" method="GET">
   <fieldset>
     <label for="date">Date</label>
-    <input type="date" name="input[date]">
-  </fieldset>
-  <fieldset>
+    <select>
+      % 1.upto(31).each do |i|
+        <option{{ ' selected="selected"' if Time.now.day == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select>
+      % 1.upto(12).each do |i|
+        <option{{ ' selected="selected"' if Time.now.month == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select>
+      % this_year = Time.now.year
+      % start_year = this_year - 2
+      % start_year.upto(this_year).each do |i|
+        <option{{ ' selected="selected"' if Time.now.year == i }}>{{ i }}</option>
+      % end
+    </select>
     <label for="types">Types</label>
     <select name="input[type]">
       % params[:types].group_by { |type| type.category }.each do |category, types|
@@ -17,9 +31,6 @@
       % end
     </select>
   </fieldset>
-  <fieldset>
-    <label for="comment">Comment</label>
-    <input type="number" name="input[comment]">
-  </fieldset>
+
     <input type="submit" value="send">
 </form>

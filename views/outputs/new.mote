@@ -3,18 +3,39 @@
 <form action="/#####" method="GET">
   <fieldset>
     <label for="date">Date</label>
-    <input type="date" name="outputs[date]">
-  </fieldset>
-  <fieldset>
+    <select>
+      % 1.upto(31).each do |i|
+        <option{{ ' selected="selected"' if Time.now.day == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select>
+      % 1.upto(12).each do |i|
+        <option{{ ' selected="selected"' if Time.now.month == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select>
+      % this_year = Time.now.year
+      % start_year = this_year - 2
+      % start_year.upto(this_year).each do |i|
+        <option{{ ' selected="selected"' if Time.now.year == i }}>{{ i }}</option>
+      % end
+    </select>
+
     <label for="pain_scale">Scale of pain</label>
-    <input type="number" name="outputs[pain_scale]">
-  </fieldset>
-  <fieldset>
+    <select>
+      % 1.upto(10).each do |i|
+        <option>{{ i }}</option>
+      % end
+    </select>
     <label for="duration">Duration</label>
-    <input type="number" name="outputs[duration]">
-  </fieldset>
-  <fieldset>
-    <textarea name="Comment" rows="8" cols="40">Add any comment</textarea>
+    <select>
+    <option>30 min</option>
+    <option>1 hour</option>
+    <option>2 hour</option>
+    <option>2 a 4 hours</option>
+    <option>4 to 8 hours</option>
+    <option>All the day</option>
+    </select>
   </fieldset>
     <input type="submit" value="send">
 </form>

@@ -10,8 +10,7 @@
 			<input type="submit" value="send">
 	</form>
 </div>
-<br>
-<br>
+
 <div id="password">
 	<h2>Forgot your password?</h2>
 	<form action="forgotpass_reply.html" "method=GET">
