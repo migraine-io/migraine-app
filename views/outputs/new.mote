@@ -1,16 +1,16 @@
-<h2>Migraine tracker - Output</h2>
+<h2>Migraine tracker - Outputs</h2>
 
 <form action="/#####" method="GET">
   <fieldset>
     <label for="date">Date</label>
     <select>
-      % 1.upto(31).each do |i|
-        <option{{ ' selected="selected"' if Time.now.day == i }}>{{ i }}</option>
+      % 1.upto(12).each do |i|
+        <option{{ ' selected="selected"' if Time.now.month == i }}>{{ i }}</option>
       % end
     </select>
     <select>
-      % 1.upto(12).each do |i|
-        <option{{ ' selected="selected"' if Time.now.month == i }}>{{ i }}</option>
+      % 1.upto(31).each do |i|
+        <option{{ ' selected="selected"' if Time.now.day == i }}>{{ i }}</option>
       % end
     </select>
     <select>
