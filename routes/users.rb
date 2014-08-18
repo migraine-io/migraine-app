@@ -35,5 +35,9 @@ class Users < Cuba
     on("outputs") do
       render("outputs/new", title: "outputs")
     end
+
+    on("profile") do
+      render("/profile", title: "profile")
+    end
   end
 end
