@@ -3,15 +3,60 @@ body {
   padding: 0;
 }
 
-#migraine-logo path {
+#migraine-logo .path {
   color: white;
 }
 
+p {
+  margin-left: 15px;
+}
+
 h2 {
-  margin: 0, 15;
+  margin: 0, 15px;
   padding: 0;
   text-align: center;
+  font-size: 24px;
 }
+
+#profile h3,
+#profile h2 {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  /*padding: 0;*/
+  font-size: 24px;
+  padding: 10px 70px;
+}
+
+#profile .profile_set h3 {
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.profile_set {
+  margin: 0 auto;
+  width: 90%;
+  line-height: 22px;
+  position: relative;
+}
+
+.profile_set nav {
+  position: absolute;
+  top: 2px;
+  right: 100px;
+}
+
+.profile_set nav li {
+  float: none;
+}
+
+.profile_set a {
+  color: #373d62;
+  text-decoration: none;
+}
+
+/*#373857*/
 
 li a {
   color: #373857;
@@ -101,7 +146,7 @@ form input[type="number"] {
   color: black;
   padding: 5px 10px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 20px;
   border-radius: 3px;
   box-sizing: border-box;
@@ -142,4 +187,35 @@ select {
 
 #sign_in {
   margin-bottom: 44px;
+}
+
+table {
+  margin: 0 auto;
+  line-height: 22px;
+  width: 80%;
+  font-size: 16px;
+}
+
+td,
+tr {
+border: 1px solid #0c090b;
+font-weight: normal;
+color: black;
+padding: 1px 4px;
+box-sizing: border-box;
+margin: 0 auto;
+-webkit-font-smoothing: antialiased;
+}
+
+
+th {
+  text-align: left;
+  border: 1px solid #0c090b;
+  padding: 4px;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(161, 170, 192, 0.1);
+}
+
+.action {
+  text-align: center;
 }
