@@ -40,8 +40,8 @@ class Guests < Cuba
       on default do
         render("sign_up", title: "Sign Up", signup: SignUp.new({}))
       end
-
     end
 
   end
+
 end
