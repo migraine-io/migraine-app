@@ -11,13 +11,8 @@ Follow the instructions on screen to start the serve.
 ### 2. Install the gems
 
 ```bash
-$ gem install cuba
-$ gem install mote
-$ gem install mote-render
-$ gem install ohm
-$ gem install scrivener
-$ gem install shotgun
-$ gem install shield
+$ gem install dep
+$ dep install
 ```
 
 ### 3. Start the server
