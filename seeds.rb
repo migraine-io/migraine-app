@@ -2,7 +2,7 @@ require_relative "app"
 
 Ohm.redis.call("FLUSHDB")
 
-user = User.create(name: "Rocio", email:"rocio@gmail.com", password: "123456")
+user = User.create(name: "Rocio Paez", email:"rocio.paez@me.com", password: "123456")
 
 Type.create(category: "Food", name: "Chocolate", user: user)
 
