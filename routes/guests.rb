@@ -29,6 +29,11 @@ class Guests < Cuba
 
           authenticate(user)
 
+          text = Mailer.render("welcome")
+
+          Malone.deliver(from: "info@migraine.io", to: user.email,
+            subject: "Welcome to Migraine App", text: text)
+
           res.redirect("/dashboard")
         end
 

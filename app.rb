@@ -1,4 +1,5 @@
 require "cuba"
+require "malone"
 require "mote"
 require "mote/render"
 require "ohm"
@@ -7,11 +8,14 @@ require "shield"
 
 Ohm.redis = Redic.new("redis://127.0.0.1:6379")
 
+Malone.connect(url: "smtp://localhost:2525", tls: false, domain: "migraine.io")
+
 Cuba.plugin(Mote::Render)
 Cuba.plugin(Shield::Helpers)
 
 Dir["./models/**/*.rb"].each { |f| require(f) }
 Dir["./filters/**/*.rb"].each { |f| require(f) }
+Dir["./services/**/*.rb"].each { |f| require(f) }
 Dir["./routes/**/*.rb"].each { |f| require(f) }
 
 Cuba.use Rack::Session::Cookie,
