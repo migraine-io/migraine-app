@@ -3,3 +3,6 @@ server:
 
 console:
 	irb -r ./app
+
+seed:
+	ruby seeds.rb
