@@ -139,7 +139,8 @@ form input[type="submit"] {
 
 form input[type="text"],
 form input[type="password"],
-form input[type="number"] {
+form input[type="number"],
+form input[type="email"] {
   border: none;
   width: 100%;
   background-color: rgba(136, 138, 176, 0.33);
