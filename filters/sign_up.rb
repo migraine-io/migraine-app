@@ -12,5 +12,6 @@ class SignUp < Scrivener
     end
 
     assert_present :password
+    assert password.length > 5, [:password, :too_small]
   end
 end

@@ -16,6 +16,10 @@
   <p>password is not valid.</p>
   % end
 
+  % if errors[:password].include?(:too_small)
+  <p>The password length must be at least 6 characters.</p>
+  % end
+
   % if errors[:email].include?(:not_unique)
   <p>Email has been registered.</p>
   % end
