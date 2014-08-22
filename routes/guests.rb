@@ -29,7 +29,7 @@ class Guests < Cuba
 
           authenticate(user)
 
-          text = Mailer.render("welcome")
+          text = Mailer.render("welcome", user: user)
 
           Malone.deliver(from: "info@migraine.io", to: user.email,
             subject: "Welcome to Migraine App", text: text)

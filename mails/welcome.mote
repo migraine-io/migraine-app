@@ -1,4 +1,4 @@
-Hi !
+Hi {{ params[:user].name }} !
 
 Thanks you using Migraine App.
 
