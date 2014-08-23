@@ -18,6 +18,10 @@ Dir["./filters/**/*.rb"].each { |f| require(f) }
 Dir["./services/**/*.rb"].each { |f| require(f) }
 Dir["./routes/**/*.rb"].each { |f| require(f) }
 
+require_relative "helpers"
+
+Cuba.plugin(Helpers)
+
 Cuba.use Rack::Session::Cookie,
   key: "migraine",
   secret: "e357845bb2856de2f7e7ba5aff8dd5cd02167ab9c26df4a90cabe6f84f8e9190"
@@ -31,7 +35,7 @@ Cuba.define do
     render("index", title: "Home")
   end
 
-  on authenticated(User) do
+  on current_user do
     run(Users)
   end
 

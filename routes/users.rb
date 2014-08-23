@@ -37,7 +37,7 @@ class Users < Cuba
     end
 
     on("profile") do
-      render("/profile", title: "Profile", current_user: authenticated(User))
+      render("/profile", title: "Profile", current_user: current_user)
     end
   end
 end
