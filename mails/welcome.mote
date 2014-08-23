@@ -1,8 +1,8 @@
 Hi {{ params[:user].name }} !
 
-Thanks you using Migraine App.
+Thanks for using Migraine App.
 
-Kind Regards,
-Rocío Paez - CEO of Migraine Corporation
+Best Regards,
+Rocío Paez - Migraine.io App
 rocio.paez@me.com
 info@migraine.io
