@@ -13,7 +13,7 @@
 
 <div id="password">
 	<h2>Forgot your password?</h2>
-	<form action="forgotpass_reply.html" "method=GET">
+	<form action="/forgot_password" method="POST">
 		<fieldset>
 			<label>Enter your email address:</label>
 			<input type="email" name="user[email]">
