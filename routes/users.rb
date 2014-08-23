@@ -19,7 +19,7 @@ class Users < Cuba
       end
 
       on get do
-        render("types/index", title: "Types", types: Type.all.to_a)
+        render("types/index", title: "Types", types: Type.all)
       end
 
       on post, param("type") do |params|
@@ -33,11 +33,11 @@ class Users < Cuba
     end
 
     on("outputs") do
-      render("outputs/new", title: "outputs")
+      render("outputs/new", title: "Outputs")
     end
 
     on("profile") do
-      render("/profile", title: "profile")
+      render("/profile", title: "Profile", current_user: authenticated(User))
     end
   end
 end
