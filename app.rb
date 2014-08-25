@@ -17,8 +17,7 @@ Dir["./models/**/*.rb"].each { |f| require(f) }
 Dir["./filters/**/*.rb"].each { |f| require(f) }
 Dir["./services/**/*.rb"].each { |f| require(f) }
 Dir["./routes/**/*.rb"].each { |f| require(f) }
-
-require_relative "helpers"
+Dir["./helpers/**/*.rb"].each { |f| require(f) }
 
 Cuba.plugin(Helpers)
 
