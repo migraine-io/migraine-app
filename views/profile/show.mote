@@ -34,77 +34,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Food</td>
-          <td>Chocolates</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Food</td>
-          <td>Cheese</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-        <tr>
-          <td>Food</td>
-          <td>Skip dinner</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-        <tr>
-          <td>Drink</td>
-          <td>Cofee</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Drink</td>
-          <td>Soda</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-          <td>Drink</td>
-          <td>Alcoholic beverages</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Symptoms</td>
-          <td>Nausea or vomiting</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Symptoms</td>
-          <td>Sensitive to light, noise, smell</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Body Changes</td>
-          <td>Menstruation or Skip menstruation</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Body Changes</td>
-          <td>Stress</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Exposed</td>
-          <td>Perfume or fragances</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Medication</td>
-          <td>Ergotamin</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Medication</td>
-          <td>Aspirin</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Medication</td>
-          <td>Exedrin</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
-        </tr>
+        % params[:current_user].types.each do |type|
+          <tr>
+            <td>{{type.category}}</td>
+            <td>{{type.name}}</td>
+            <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
+          </tr>
+        % end
       </tbody>
     </table>
   </div>

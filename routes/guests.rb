@@ -27,12 +27,16 @@ class Guests < Cuba
         on sign_up.valid? do
           user = User.create(sign_up.slice(:name, :email, :password))
 
-          authenticate(user)
+          DEFAULT_TYPES.each do |type_attributes|
+            Type.create(category: type_attributes["category"], name: type_attributes["name"], user_id: user.id)
+          end
 
           text = Mailer.render("welcome", user: user)
 
           Malone.deliver(from: "info@migraine.io", to: user.email,
             subject: "Welcome to Migraine App", text: text)
+
+          authenticate(user)
 
           res.redirect("/dashboard")
         end

@@ -5,6 +5,9 @@ require "mote/render"
 require "ohm"
 require "scrivener"
 require "shield"
+require "yaml"
+
+DEFAULT_TYPES = YAML.load_file("./config/default_types.yml")
 
 Ohm.redis = Redic.new("redis://127.0.0.1:6379")
 
