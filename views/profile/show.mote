@@ -3,7 +3,7 @@
     <h2>Profile</h2>
     <nav>
       <ul>
-        <li><a href="/profile/edit">Edit</a></a></li>
+        <li><a href="/profile/edit">Edit</a></li>
       </ul>
     </nav>
     <table>
@@ -44,3 +44,4 @@
       </tbody>
     </table>
   </div>
+</div>

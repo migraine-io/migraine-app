@@ -27,6 +27,8 @@
   <input type="submit" value="Update">
 </form>
 
+
+
 <h2>Change Password</h2>
 
 % errors = update_password.errors
@@ -40,7 +42,7 @@
   % end
 % end
 
-<form action="/password" method="POST">
+<form action="/profile" method="POST">
   <fieldset>
     <label for="password">Password</label>
     <input id="password" type="password" name="user[password]">
