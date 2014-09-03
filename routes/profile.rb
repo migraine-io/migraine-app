@@ -1,37 +1,43 @@
 class Profile < Cuba
   define do
     on post, param("user") do |params|
-
-      update_profile               = UpdateProfile.new(params)
+      update_profile = UpdateProfile.new(params)
       update_profile.current_email = current_user.email
 
       on update_profile.valid? do
-        user       = current_user
-        user.name  = update_profile.name
-        user.email = update_profile.email
-        user.save
+        attributes = update_profile.attributes
+        attributes.delete(:current_email)
+
+        current_user.update(attributes)
+
+        session[:success] = "Your profile has been updated"
+
         res.redirect("/profile")
       end
 
       on default do
-        update_password = UpdatePassword.new({})
-
-        render("profile/edit", title: "Edit Profile",
-                      update_profile: update_profile,
-                     update_password: update_password)
+        render("profile", title: "Profile", user: current_user, update_profile: update_profile)
       end
     end
 
-    on("edit") do
-      update_profile = UpdateProfile.new(name: current_user.name, email: current_user.email)
-      update_password = UpdatePassword.new({})
-      render("profile/edit", title: "Edit Profile",
-                    update_profile: update_profile,
-                   update_password: update_password)
+    on post, param("password") do |params|
+      update_password = UpdatePassword.new(params)
+
+      on update_password.valid? do
+        current_user.update(password: update_password.password)
+
+        session[:success] = "Your password has been updated"
+
+        res.redirect("/profile")
+      end
+
+      on default do
+        render("profile", title: "Profile", user: current_user, update_password: update_password)
+      end
     end
 
     on get do
-      render("profile/show", title: "Profile", current_user: current_user)
+      render("profile", title: "Profile", user: current_user)
     end
   end
 end

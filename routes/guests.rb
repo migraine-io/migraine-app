@@ -11,6 +11,8 @@ class Guests < Cuba
         end
 
         on default do
+          session[:error] = "Invalid Username and Password"
+
           render("sign_in", title: "Sign In")
         end
       end
