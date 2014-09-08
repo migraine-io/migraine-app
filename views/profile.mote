@@ -10,11 +10,11 @@
       % errors = update_profile.errors
       % if errors
         % if errors[:name].include?(:not_present)
-        <p>name is no present.</p>
+        <p>Name is no present.</p>
         % end
 
         % if errors[:email].include?(:not_email)
-        <p>email is not valid.</p>
+        <p>Email is not valid.</p>
         % end
 
         % if errors[:email].include?(:not_unique)
@@ -48,11 +48,11 @@
         % end
 
         % if errors[:password].include?(:not_present)
-        <p>password is not valid.</p>
+        <p>Password is not valid.</p>
         % end
 
         % if errors[:password].include?(:not_confirmed)
-        <p>password and password confirmation don't match</p>
+        <p>Password and password confirmation don't match</p>
         % end
       % end
     % end
