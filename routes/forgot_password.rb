@@ -12,6 +12,7 @@ class Forgot_password < Cuba
 
         res.redirect("/sign_in")
       end
+
       on default do
         render("forgot_password", title: "Forgot Password")
       end

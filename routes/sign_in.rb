@@ -11,7 +11,7 @@ class Sign_in < Cuba
         end
 
         on default do
-          session[:error] = "Invalid Username and Password"
+          session[:success] = "Invalid Username and Password"
 
           render("sign_in", title: "Sign In")
         end
@@ -21,6 +21,7 @@ class Sign_in < Cuba
         render("sign_in", title: "Sign In")
       end
     end
+
     on default do
       run(Forgot_password)
     end
