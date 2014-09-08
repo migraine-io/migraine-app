@@ -225,15 +225,20 @@ th {
 }
 
 .error {
+  display: block;
   margin-top: 50px;
   padding: 0;
   text-align: center;
+  color: red;
+  line-height: 0;
 }
 
 .success {
-  color: green;
   display: block;
+  margin-top: 50px;
+  padding: 0;
   text-align: center;
-  margin-top: 20px;
-
+  color: red;
+  line-height: 0;
+  color: green;
 }
