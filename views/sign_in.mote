@@ -9,15 +9,6 @@
 		</fieldset>
 			<input type="submit" value="send">
 	</form>
-</div>
 
-<div id="password">
-	<h2>Forgot your password?</h2>
-	<form action="/forgot_password" method="POST">
-		<fieldset>
-			<label>Enter your email address:</label>
-			<input type="email" name="user[email]">
-		</fieldset>
-			<input type="submit" value="Send">
-	</form>
+	<p><a href="/forgot_password">Forgot your password?</a></p>
 </div>

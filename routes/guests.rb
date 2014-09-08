@@ -1,27 +1,5 @@
 class Guests < Cuba
   define do
-    on("sign_in") do
-      on post, param("user") do |params|
-        user = User.authenticate(params["email"],  params["password"])
-
-        on user do
-          authenticate(user)
-
-          res.redirect("/dashboard")
-        end
-
-        on default do
-          session[:error] = "Invalid Username and Password"
-
-          render("sign_in", title: "Sign In")
-        end
-      end
-
-      on default do
-        render("sign_in", title: "Sign In")
-      end
-    end
-
     on("sign_up") do
       on post, param("user") do |params|
         sign_up = SignUp.new(params)
@@ -35,8 +13,7 @@ class Guests < Cuba
 
           text = Mailer.render("welcome", user: user)
 
-          Malone.deliver(from: "info@migraine.io", to: user.email,
-            subject: "Welcome to Migraine App", text: text)
+          Malone.deliver(from: "info@migraine.io", to: user.email, subject: "Welcome to Migraine App", text: text)
 
           authenticate(user)
 
@@ -53,23 +30,8 @@ class Guests < Cuba
       end
     end
 
-    on("forgot_password") do
-      on post, param("user") do |params|
-        user = User.fetch(params["email"])
-
-        if user
-          text = Mailer.render("forgot_password", user: user)
-
-          Malone.deliver(from: "info@migraine.io", to: user.email,
-            subject: "Forgot Password", text: text)
-        end
-
-        res.redirect("/sign_in")
-      end
-
-      on default do
-        res.redirect("/sign_in")
-      end
+    on default do
+      run(Sign_in)
     end
   end
 end
