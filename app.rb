@@ -34,7 +34,7 @@ Cuba.use Rack::Static,
 
 Cuba.define do
   on(root) do
-    render("index", title: "Home")
+    render("index", title: "Migraine.io")
   end
 
   on current_user do
