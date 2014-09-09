@@ -1,3 +1,5 @@
+% user = params.fetch(:user)
+
 <div  class="profile_set">
   <h2>Input Types</h2>
 
@@ -16,7 +18,7 @@
         <tr>
           <td>{{type.category}}</td>
           <td>{{type.name}}</td>
-          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
+          <td class="action"><a href="/types/edit">Edit</a> - <a href="###">Delete</a></td>
         </tr>
       % end
     </tbody>
