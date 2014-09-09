@@ -21,6 +21,10 @@ class Users < Cuba
       run(Types)
     end
 
+    on("types/edit") do
+      run(Types)
+    end
+
     on("outputs") do
       render("outputs/new", title: "Outputs")
     end

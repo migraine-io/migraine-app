@@ -1,0 +1,20 @@
+<h2>Edit your type</h2>
+
+<form action="/types" method="POST">
+  <fieldset>
+    <label for="type[category]">Category</label>
+    <select name="type[category]">
+      <option>Food</option>
+      <option>Drink</option>
+      <option>Symptoms</option>
+      <option>Body Changes</option>
+      <option>Medication</option>
+      <option>Other</option>
+    </select>
+
+    <label for="type[name]">Name</label>
+    <input type="text" name="type[name]">
+  </fieldset>
+
+  <input type="submit" value="Save">
+</form>
