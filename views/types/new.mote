@@ -1,12 +1,17 @@
-<h1>Types</h1>
+<h2>Add a new type</h2>
 
-<form action="/types" method="POST">
+<form action="/types/edit" method="POST">
   <fieldset>
     <label for="type[category]">Category</label>
-    <input type="text" name="type[category]">
-  </fieldset>
+    <select name="type[category]">
+      <option>Food</option>
+      <option>Drink</option>
+      <option>Symptoms</option>
+      <option>Body Changes</option>
+      <option>Medication</option>
+      <option>Other</option>
+    </select>
 
-  <fieldset>
     <label for="type[name]">Name</label>
     <input type="text" name="type[name]">
   </fieldset>
