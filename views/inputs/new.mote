@@ -1,6 +1,6 @@
 <h2>Migraine tracker - Inputs</h2>
 
-<form action="/#####" method="GET">
+<form action="/inputs" method="GET">
   <fieldset>
     <label for="date">Date</label>
     <select>

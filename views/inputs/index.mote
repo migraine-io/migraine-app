@@ -1,4 +1,4 @@
-<a href="/inputs/new">New Input</a>
+<h2><a href="/inputs/new">New Input</a></h2>
 
 <ul>
   % params[:inputs].each do |input|
