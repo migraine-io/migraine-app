@@ -1,1 +1,7 @@
-<p>Landing page goes here.</p>
+<div class="index">
+  <p><a href="http://teams.railsgirlssummerofcode.org/teams/17">Rails Girls Summer of Code</a></p>
+  <p>This is the app that I'm still working for the Rails Girls Summer of code 2014</p>
+  <p>This project will help to document and understand the process of migraines.</p>
+
+  <img src="/img/icon1.png" alt="Migraine icon" id="migraine">
+</div>

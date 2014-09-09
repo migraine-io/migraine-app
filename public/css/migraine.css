@@ -217,6 +217,17 @@ th {
   background-color: rgba(161, 170, 192, 0.1);
 }
 
+.index p {
+  color: #353653;
+}
+
+.index img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
 .action {
   text-align: center;
 }
