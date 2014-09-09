@@ -1,0 +1,27 @@
+<div  class="profile_set">
+  <h2>Input Types</h2>
+
+  <h2><a href="/types/new">Add New</a></h2>
+
+    <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Name</th>
+        <th class="action">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      % user.types.each do |type|
+        <tr>
+          <td>{{type.category}}</td>
+          <td>{{type.name}}</td>
+          <td class="action"><a href="###">Edit</a> - <a href="###">Delete</a></td>
+        </tr>
+      % end
+    </tbody>
+  </table>
+
+
+
+</div>

@@ -18,22 +18,7 @@ class Users < Cuba
     end
 
     on("types") do
-      on("new") do
-        render("types/new", title: "New Type")
-      end
-
-      on get do
-        render("types/index", title: "Types", types: Type.all)
-      end
-
-      on post, param("type") do |params|
-        create_type = CreateType.new(params)
-
-        if create_type.valid?
-          Type.create(create_type.slice(:category, :name))
-          res.redirect("/types")
-        end
-      end
+      run(Types)
     end
 
     on("outputs") do

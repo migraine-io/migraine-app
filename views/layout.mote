@@ -16,6 +16,7 @@
             <li><a href="/inputs">Inputs</a></a></li>
             <li><a href="/outputs">Outputs</a></a></li>
             <li><a href="/profile">Profile</a></a></li>
+            <li><a href="/types/edit">Edit Types</a></a></li>
             <li><a href="/sign_out">Sign Out</a></a></li>
           </ul>
         </nav>
