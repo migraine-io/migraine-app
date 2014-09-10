@@ -1,7 +1,7 @@
 <div id="password">
   <h2>Forgot your password?</h2>
 
-  <form action="/forgot_password" method="POST">
+  <form action="/password/forgot" method="POST">
     <fieldset>
       <label for="user[email]">Enter your email address to reset your password</label>
       <input type="email" name="user[email]">
