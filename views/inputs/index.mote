@@ -1,7 +1,7 @@
 <h2><a href="/inputs/new">New Input</a></h2>
 
 <ul>
-  % params[:inputs].each do |input|
+  % params[:inputs].each do |inputs|
     <li><a href="/inputs/{{ input.id }}">{{ input.type.category }} - {{ input.type.name }}</a></li>
   % end
 </ul>
