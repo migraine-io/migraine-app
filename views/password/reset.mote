@@ -1,0 +1,25 @@
+<h2>Reset your password</h2>
+% update_password = params[:update_password]
+% if update_password
+  % errors = update_password.errors
+  % if errors
+    % if errors[:password].include?(:too_small)
+    <p>The password length must be at least 6 characters.</p>
+    % end
+    % if errors[:password].include?(:not_present)
+    <p>Password is not valid.</p>
+    % end
+    % if errors[:password].include?(:not_confirmed)
+    <p>Password and password confirmation don't match</p>
+    % end
+  % end
+% end
+<form action="/sign_in" method="POST">
+  <fieldset>
+    <label for="password">New Password</label>
+    <input id="password" type="password" name="password[password]">
+    <label for="password_confirmation">Password Confirmation</label>
+    <input id="password_confirmation" type="password" name="password[password_confirmation]">
+  </fieldset>
+  <input type="submit" value="Update">
+</form>

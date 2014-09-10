@@ -10,12 +10,19 @@ class Forgot_password < Cuba
           Malone.deliver(from: "info@migraine.io", to: user.email, subject: "Forgot Password", text: text)
         end
 
-        res.redirect("/sign_in")
+        res.redirect("/password/reset")
       end
 
       on default do
         render("password/forgot", title: "Forgot Password")
       end
     end
+
+    on("password/reset") do
+      render("password/reset", title: "Edit Type")
+    end
+
+    res.redirect("/sign_in")
+
   end
 end
