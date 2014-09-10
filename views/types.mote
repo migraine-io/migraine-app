@@ -2,7 +2,6 @@
 
 <div  class="profile_set">
   <h2>Input Types</h2>
-
   <h2><a href="/types/new">Add New</a></h2>
 
     <table>
@@ -23,7 +22,4 @@
       % end
     </tbody>
   </table>
-
-
-
 </div>
