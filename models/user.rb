@@ -11,6 +11,10 @@ class User < Ohm::Model
 
   unique :email
 
+  # fetch user by email.
+  #
+  #   user = User.fetch("rocio.paez@me.com")
+  #
   def self.fetch(email)
     with(:email, email)
   end
