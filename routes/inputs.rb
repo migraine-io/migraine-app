@@ -15,7 +15,5 @@ class Inputs < Cuba
     on get do
       render("inputs/index", title: "Inputs", inputs: current_user.inputs)   #esto se pasa al index
     end
-
-
   end
 end
