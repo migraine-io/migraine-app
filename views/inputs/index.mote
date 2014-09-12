@@ -1,7 +1,25 @@
+% inputs = params[:inputs]
+
 <h2><a href="/inputs/new">New Input</a></h2>
 
-<ul>
-  % params[:inputs].each do |inputs|
-    <li><a href="/inputs/{{ input.id }}">{{ input.type.category }} - {{ input.type.name }}</a></li>
-  % end
-</ul>
+
+
+<h2>Your Input Types record</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    % inputs.each do |input|
+      <tr>
+        <td>{{input.date}}</td>
+        <td>{{input.type.category}}</td>
+        <td>{{input.type.name}}</td>
+      </tr>
+    % end
+  </tbody>
+</table>
