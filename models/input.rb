@@ -1,10 +1,8 @@
 class Input < Ohm::Model
+  include Ohm::DataTypes
+
+  attribute :date, Type::Date
+
   reference :user, :User
-  reference :type, :Type
-
-  attribute :date
-  attribute :category
-  attribute :name
-
-  collection :inputs, :Input
+  reference :type, "::Type"
 end

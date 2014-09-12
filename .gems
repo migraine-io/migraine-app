@@ -2,8 +2,9 @@ malone -v 1.0.7
 cuba -v 3.3.0
 mote -v 1.1.2
 mote-render -v 1.1.0
+mt -v 0.0.2
 ohm -v 2.0.1
+ohm-contrib -v 2.0.0
+scrivener -v 0.2.0
 shield -v 2.1.0
 shotgun -v 0.9
-scrivener -v 0.2.0
-mt -v 0.0.2
