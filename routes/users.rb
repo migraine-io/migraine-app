@@ -13,6 +13,10 @@ class Users < Cuba
       run(Inputs)
     end
 
+    on("outputs") do
+      run(Outputs)
+    end
+
     on("profile") do
       run(Profile)
     end
@@ -25,8 +29,5 @@ class Users < Cuba
       run(Types)
     end
 
-    on("outputs") do
-      render("outputs/new", title: "Outputs")
-    end
   end
 end
