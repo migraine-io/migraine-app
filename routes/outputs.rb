@@ -6,7 +6,7 @@ class Outputs < Cuba
 
     on post, param("output") do |params|
       date = Date.new(params["date_year"].to_i, params["date_month"].to_i, params["date_day"].to_i)
-      output = Output.create(date: date, scale: params["scale"].to_i, duration: params["duration"].to_i, user: current_user)
+      output = Output.create(date: date, scale: params["scale"], duration: params["duration"], user: current_user)
 
       res.redirect("/outputs")
     end
