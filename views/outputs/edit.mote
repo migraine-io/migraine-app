@@ -1,0 +1,42 @@
+<h2>Edit Output</h2>
+
+<form action="/outputs/{{output.id}}" method="POST">
+  <fieldset>
+    <label for="date">Date</label>
+    <select name="output[date_month]">
+      % 1.upto(12).each do |i|
+        <option{{ ' selected="selected"' if output.date.month == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select name="output[date_day]">
+      % 1.upto(31).each do |i|
+        <option{{ ' selected="selected"' if output.date.day == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select name="output[date_year]">
+      % this_year = Time.now.year
+      % start_year = this_year - 2
+      % start_year.upto(this_year).each do |i|
+        <option{{ ' selected="selected"' if output.date.year == i }}>{{ i }}</option>
+      % end
+    </select>
+
+    <label for="output[scale]">Scale of pain</label>
+    <select name="output[scale]">
+      % 1.upto(10).each do |i|
+        <option{{ ' selected="selected"' if output.scale == i }}>{{ i }}</option>
+      % end
+    </select>
+    <label for="output[duration]">Duration</label>
+    <select name="output[duration]">
+      <option value="30"{{ ' selected="selected"' if output.duration == 30 }}>30 min</option>
+      <option value="60"{{ ' selected="selected"' if output.duration == 60 }}>1 hour</option>
+      <option value="120"{{ ' selected="selected"' if output.duration == 120 }}>2 hour</option>
+      <option value="240"{{ ' selected="selected"' if output.duration == 240 }}>4 hours</option>
+      <option value="480"{{ ' selected="selected"' if output.duration == 480 }}>8 hours</option>
+      <option value="1440"{{ ' selected="selected"' if output.duration == 1440 }}>All Day</option>
+    </select>
+  </fieldset>
+
+  <input type="submit" value="Update">
+</form>

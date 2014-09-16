@@ -9,6 +9,7 @@
       <th>Date</th>
       <th>Duration</th>
       <th>Scale</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,7 @@
         <td>{{output.date}}</td>
         <td>{{output.duration}}</td>
         <td>{{output.scale}}</td>
+        <td><a href="/outputs/{{output.id}}">Edit</a></td>
       </tr>
     % end
   </tbody>
