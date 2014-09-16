@@ -9,6 +9,7 @@ class Outputs < Cuba
 
       on post, param("output") do |params|
         date = Date.new(params["date_year"].to_i, params["date_month"].to_i, params["date_day"].to_i)
+        output.update(date: date, scale: params["scale"], duration: params["duration"])
 
         res.redirect("/outputs")
       end
