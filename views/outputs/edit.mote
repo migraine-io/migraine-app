@@ -29,12 +29,13 @@
     </select>
     <label for="output[duration]">Duration</label>
     <select name="output[duration]">
-      <option value="30"{{ ' selected="selected"' if output.duration == 30 }}>30 min</option>
-      <option value="60"{{ ' selected="selected"' if output.duration == 60 }}>1 hour</option>
-      <option value="120"{{ ' selected="selected"' if output.duration == 120 }}>2 hour</option>
-      <option value="240"{{ ' selected="selected"' if output.duration == 240 }}>4 hours</option>
-      <option value="480"{{ ' selected="selected"' if output.duration == 480 }}>8 hours</option>
-      <option value="1440"{{ ' selected="selected"' if output.duration == 1440 }}>All Day</option>
+      % Output::DURATIONS.each do |duration, description|
+        % if output.duration == duration
+          <option value="{{ duration }}" selected>{{ description }}</option>
+        % else
+          <option value="{{ duration }}">{{ description }}</option>
+        % end
+      % end
     </select>
   </fieldset>
 
