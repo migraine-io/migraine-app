@@ -3,11 +3,11 @@
 <h2><a href="/outputs/new">New Output</a></h2>
 
 <h2>Your Output Types record:</h2>
-<table>
+<table class="output">
   <thead>
     <tr>
       <th>Date</th>
-      <th>Duration</th>
+      <th class="output">Duration minutes</th>
       <th>Scale</th>
       <th>Actions</th>
     </tr>

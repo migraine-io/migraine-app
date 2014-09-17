@@ -208,6 +208,18 @@ margin: 0 auto;
 -webkit-font-smoothing: antialiased;
 }
 
+.output {
+  width: 60%;
+  font-size: 15px;
+  text-align: center;
+}
+
+.output th {
+  width: 20%;
+  font-size: 16px;
+  text-align: center;
+}
+
 
 th {
   text-align: left;
