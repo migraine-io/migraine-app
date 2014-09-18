@@ -1,0 +1,37 @@
+<h2>Edit Inputs</h2>
+
+<form action="/inputs/{{input.id}}" method="POST">
+  <fieldset>
+    <label for="date">Date</label>
+    <select name="input[date_month]">
+      % 1.upto(12).each do |i|
+        <option{{ ' selected="selected"' if input.date.month == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select name="input[date_day]">
+      % 1.upto(31).each do |i|
+        <option{{ ' selected="selected"' if input.date.day == i }}>{{ i }}</option>
+      % end
+    </select>
+    <select name="input[date_year]">
+      % this_year = Time.now.year
+      % start_year = this_year - 2
+      % start_year.upto(this_year).each do |i|
+        <option{{ ' selected="selected"' if input.date.year == i }}>{{ i }}</option>
+      % end
+    </select>
+
+    <label for="types">Types</label>
+    <select name="input[type_id]">
+      % params[:types].group_by { |type| type.category }.each do |category, types|
+        <optgroup label="{{ category }}">
+          % types.each do |type|
+            <option value="{{ type.id }}">{{ type.name }}</option>
+          % end
+        </optgroup>
+      % end
+    </select>
+
+  </fieldset>
+    <input type="submit" value="send">
+</form>

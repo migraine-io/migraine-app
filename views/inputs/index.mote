@@ -9,6 +9,7 @@
       <th>Date</th>
       <th>Category</th>
       <th>Name</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +18,11 @@
         <td>{{input.date}}</td>
         <td>{{input.type.category}}</td>
         <td>{{input.type.name}}</td>
+        <td><a href="/inputs/{{input.id}}">Edit</a></td>
       </tr>
     % end
   </tbody>
 </table>
+
+
+<!-- <td class="action"><a href="/types/edit">Edit</a> - <a href="###">Delete</a></td> -->

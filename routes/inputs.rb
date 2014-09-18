@@ -4,6 +4,23 @@ class Inputs < Cuba
       render("inputs/new", title: "New Input", types: Type.all)
     end
 
+
+     on(":id") do |id|
+      input = Input[id]
+
+      on post, param("input") do |params|
+        date = Date.new(params["date_year"].to_i, params["date_month"].to_i, params["date_day"].to_i)
+        type = ::Type[params["type_id"]]
+        input = input.update(date: date, type: type)
+
+        res.redirect("/inputs")
+      end
+
+      on get do
+        render("inputs/edit", title: "Edit Input", input: input, user: current_user, types: current_user.types)
+      end
+    end
+
     on post, param("input") do |params|
       date = Date.new(params["date_year"].to_i, params["date_month"].to_i, params["date_day"].to_i)
       type = ::Type[params["type_id"]]
