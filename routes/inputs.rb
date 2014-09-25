@@ -1,7 +1,7 @@
 class Inputs < Cuba
   define do
     on("new") do
-      render("inputs/new", title: "New Input", types: Type.all)
+      render("inputs/new", title: "New Input", types: current_user.types)
     end
 
 
