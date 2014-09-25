@@ -4,7 +4,7 @@ Ohm.redis.call("FLUSHDB")
 
 user = User.create(name: "Rocio Paez", email:"rocio.paez@me.com", password: "123456")
 
-Type.create(category: "Food", name: "Chesse", user: user)
+Type.create(category: "Food", name: "Cheese", user: user)
 
 Type.create(category: "Food", name: "Chocolate", user: user)
 
