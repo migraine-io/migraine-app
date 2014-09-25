@@ -24,3 +24,5 @@
   name: "Exedrin"
 - category: "Medication"
   name: "Aspirin"
+- category: "Other"
+  name: "other"

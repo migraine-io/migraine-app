@@ -17,7 +17,7 @@
         <tr>
           <td>{{type.category}}</td>
           <td>{{type.name}}</td>
-          <td class="action"><a href="/types/edit">Edit</a> - <a href="###">Delete</a></td>
+          <td class="action"><a href="/types/{{type.id}}/edit">Edit</a> - <a href="###">Delete</a></td>
         </tr>
       % end
     </tbody>

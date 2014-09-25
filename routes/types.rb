@@ -4,28 +4,31 @@ class Types < Cuba
       render("types/new", title: "New Type")
     end
 
-    on("edit") do
-      render("types/edit", title: "Edit Type")
+    on(":id") do |id|
+      type = Type[id]
+
+      on post, param("type") do |params|
+        type.update(category: params["category"], name: params["name"])
+        res.redirect("/types")
+      end
+
+      on get do
+        render("types/edit", title: "Types Edit", type: type)
+      end
     end
 
     on post, param("type") do |params|
-      create_type = CreateType.new(params)
-      if create_type.valid?
-        Type.create(create_type.slice(:category, :name))
-        res.redirect("/types")
-      end
-    end
-
-    on("types/new") do
-      on post, params("type") do |params|
-        create_type = CreateType.new(params)
-        Type.create(category: type_attributes["category"], name: type_attributes["name"], user_id: user.id)
-      end
-
+      Type.create(category: params["category"], name: params["name"], user_id: current_user.id)
+      res.redirect("/types")
     end
 
     on default do
-      render("types", title: "Types", user: current_user)
+      render("types/index", title: "Types", user: current_user)
     end
   end
 end
+
+
+# on("edit") do
+#   render("types/edit", title: "Edit Type")
+# end
