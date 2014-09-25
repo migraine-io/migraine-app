@@ -1,7 +1,0 @@
-<a href="/types/new">New Type</a>
-
-<ul>
-  % params[:types].each do |type|
-    <li><a href="/types/{{ type.id }}">{{ type.category }} - {{ type.name }}</a></li>
-  % end
-</ul>
