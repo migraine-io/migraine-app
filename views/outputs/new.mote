@@ -29,12 +29,9 @@
     </select>
     <label for="output[duration]">Duration</label>
     <select name="output[duration]">
-      <option value="30">30 min</option>
-      <option value="60">1 hour</option>
-      <option value="120">2 hour</option>
-      <option value="240">4 hours</option>
-      <option value="480">8 hours</option>
-      <option value="1440">All Day</option>
+      % Output::DURATIONS.each do |duration, description|
+          <option value="{{ duration }}">{{ description }}</option>
+      % end
     </select>
   </fieldset>
 
