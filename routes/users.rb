@@ -1,7 +1,43 @@
 class Users < Cuba
   define do
     on("dashboard") do
-      render("dashboard", title: "Dashboard")
+      outputs = current_user.outputs.to_a
+      inputs  = current_user.inputs.to_a
+
+      output_dates = outputs.map { |o| o.date }
+      input_dates  = inputs.map { |i| i.date }
+
+      all_dates = output_dates + input_dates
+      all_years = all_dates.map { |d| d.year }.sort
+
+      start_year = all_years.first
+      end_year   = all_years.last
+
+      statistics = {}
+      start_year.upto(end_year).each do |y|
+        statistics[y] ||= {}
+        1.upto(12).each do |m|
+          statistics[y][m] ||= {}
+
+          outputs.each do |output|
+            statistics[y][m][:outputs] ||= []
+
+            if output.date.year == y && output.date.month == m
+              statistics[y][m][:outputs] << output
+            end
+          end
+
+          inputs.each do |input|
+            statistics[y][m][:inputs] ||= []
+
+            if input.date.year == y && input.date.month == m
+              statistics[y][m][:inputs] << input
+            end
+          end
+        end
+      end
+
+      render("dashboard", title: "Dashboard", statistics: statistics)
     end
 
     on("sign_out") do

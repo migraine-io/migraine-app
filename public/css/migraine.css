@@ -197,6 +197,13 @@ table {
   font-size: 16px;
 }
 
+table.statistics {
+  margin: 20px auto;
+  line-height: 22px;
+  width: 95%;
+  font-size: 14px;
+}
+
 td,
 tr {
 border: 1px solid #0c090b;

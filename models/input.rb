@@ -5,4 +5,8 @@ class Input < Ohm::Model
 
   reference :user, :User
   reference :type, "::Type"
+
+  def description
+    "#{ type.category } - #{ type.name }"
+  end
 end

@@ -12,8 +12,6 @@ class Output < Ohm::Model
 
   reference :user, :User
 
-
-
   attribute :date, Type::Date
   attribute :duration, Type::Integer
   attribute :scale, Type::Integer

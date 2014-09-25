@@ -1,3 +1,31 @@
 <h3>Dashboard resume statics<h3>
 
-<img src="/img/migraine_scale.jpg" alt="Migraine Scale" id="dashboard">
+% statistics.each do |year, data|
+  <h3>{{ year }}</h3>
+
+  <table class="statistics">
+    <tr>
+      % data.each do |month, data|
+        <th width="8.3%">{{ month }}</th>
+      % end
+    </tr>
+    <tr>
+      % data.each do |month, data|
+        <td>
+          % if data[:outputs].length == 0
+            0
+          % else
+            {{ (data[:outputs].map { |o| o.scale }.reduce(:+).to_f / data[:outputs].length).round(2) }}
+          % end
+        </td>
+      % end
+    </tr>
+    <tr>
+      % data.each do |month, data|
+        <td>
+          {{ data[:inputs].group_by { |i| i.type_id }.sort_by { |group, values| -values.length }.map { |group, values| "#{ values.first.description } (#{ values.length })" if values.first }.join("<br>") }}
+        </td>
+      % end
+    </tr>
+  </table>
+% end
