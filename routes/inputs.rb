@@ -1,9 +1,5 @@
 class Inputs < Cuba
   define do
-    on("new") do
-      render("inputs/new", title: "New Input", types: current_user.types)
-    end
-
     on(":id") do |id|
       input = Input[id]
 
@@ -35,7 +31,7 @@ class Inputs < Cuba
     end
 
     on get do
-      render("inputs/index", title: "Inputs", inputs: current_user.inputs)   #esto se pasa al index
+      render("inputs/index", title: "Inputs", inputs: current_user.inputs, types: current_user.types)   #esto se pasa al index
     end
   end
 end

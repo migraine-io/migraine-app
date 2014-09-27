@@ -1,9 +1,36 @@
 % inputs = params[:inputs]
 
 <div class="forms">
-  <h2><a href="/inputs/new">New Input</a></h2>
+  <form action="/inputs" method="POST">
+      <select name="input[date_month]">
+        % 1.upto(12).each do |i|
+          <option{{ ' selected="selected"' if Time.now.month == i }}>{{ i }}</option>
+        % end
+      </select>
+      <select name="input[date_day]">
+        % 1.upto(31).each do |i|
+          <option{{ ' selected="selected"' if Time.now.day == i }}>{{ i }}</option>
+        % end
+      </select>
+      <select name="input[date_year]">
+        % this_year = Time.now.year
+        % start_year = this_year - 2
+        % start_year.upto(this_year).each do |i|
+          <option{{ ' selected="selected"' if Time.now.year == i }}>{{ i }}</option>
+        % end
+      </select>
+      <select name="input[type_id]">
+        % params[:types].group_by { |type| type.category }.each do |category, types|
+          <optgroup label="{{ category }}">
+            % types.each do |type|
+              <option value="{{ type.id }}">{{ type.name }}</option>
+            % end
+          </optgroup>
+        % end
+      </select>
+      <input type="submit" value="Add Input">
+  </form>
 
-  <h2>Your Input Types record</h2>
   <table>
     <thead>
       <tr>
@@ -16,7 +43,7 @@
     <tbody>
       % inputs.each do |input|
         <tr>
-          <td>{{input.date}}</td>
+          <th>{{input.date}}</th>
           <td>{{input.type.category}}</td>
           <td>{{input.type.name}}</td>
           <td class="action">
