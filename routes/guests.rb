@@ -13,7 +13,11 @@ class Guests < Cuba
 
           text = Mailer.render("welcome", user: user)
 
-          Malone.deliver(from: "info@migraine.io", to: user.email, subject: "Welcome to Migraine App", text: text)
+          begin
+            Malone.deliver(from: "info@migraine.io", to: user.email, subject: "Welcome to Migraine App", text: text)
+          rescue => e
+            p e
+          end
 
           authenticate(user)
 
