@@ -1,12 +1,7 @@
-require "cuba"
-require "malone"
-require "mote"
-require "mote/render"
-require "ohm"
-require "ohm/contrib"
-require "scrivener"
-require "shield"
+require "bundler/setup"
 require "yaml"
+
+Bundler.require
 
 DEFAULT_TYPES = YAML.load_file("./config/default_types.yml")
 

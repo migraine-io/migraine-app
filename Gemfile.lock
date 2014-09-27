@@ -1,0 +1,41 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    armor (0.0.3)
+    cuba (3.3.0)
+      rack
+    hiredis (0.5.2)
+    mailfactory (1.4.0)
+      mime-types (>= 1.13.1)
+    malone (1.0.7)
+      mailfactory (~> 1.4)
+    mime-types (2.3)
+    mote (1.1.2)
+    mote-render (1.1.0)
+    msgpack (0.5.8)
+    nido (0.0.1)
+    ohm (2.0.1)
+      msgpack
+      nido
+      redic
+    ohm-contrib (2.0.0)
+      ohm (~> 2.0.0)
+    rack (1.5.2)
+    redic (1.1.1)
+      hiredis
+    scrivener (0.2.0)
+    shield (2.1.0)
+      armor
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba
+  malone
+  mote
+  mote-render
+  ohm
+  ohm-contrib
+  scrivener
+  shield
