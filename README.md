@@ -11,8 +11,9 @@ Follow the instructions on screen to start the serve.
 ### 2. Install the gems
 
 ```bash
-$ gem install dep
-$ dep install
+$ gem install bundler
+$ bundle install
+
 ```
 
 ### 3. Start the server
