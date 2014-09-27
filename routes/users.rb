@@ -14,7 +14,7 @@ class Users < Cuba
       end_year   = all_years.last
 
       statistics = {}
-      start_year.upto(end_year).each do |y|
+      end_year.downto(start_year).each do |y|
         statistics[y] ||= {}
         1.upto(12).each do |m|
           statistics[y][m] ||= {}

@@ -1,31 +1,35 @@
-<h2>Dashboard<h2>
-
 % statistics.each do |year, data|
-  <h3>{{ year }}</h3>
-
   <table class="statistics">
-    <tr>
-      % data.each do |month, data|
-        <th width="8.3%">{{ month }}</th>
+    <thead>
+      <tr>
+        <th width="10%">{{ year }}</th>
+        <th width="10%">TOS</th>
+        <th width="10%">TOC</th>
+        <th width="10%">TOA</th>
+        <th width="60%">Inputs</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      % data.each do |month, month_data|
+        <tr>
+          <th>{{ Date::MONTHNAMES[month] }}</th>
+          <td>{{ month_data[:outputs].map(&:scale).reduce(:+).to_i }}</td>
+          <td>{{ month_data[:outputs].length }}</td>
+          <td>
+            % if month_data[:outputs].length == 0
+              0
+            % else
+              {{ (month_data[:outputs].map(&:scale).reduce(:+).to_f / month_data[:outputs].length).round(2) }}
+            % end
+          </td>
+          <td>
+            % buf = month_data[:inputs].group_by { |i| i.type_id }.sort_by { |group, values| -values.length }
+            % buf = buf.map { |group, values| "#{ values.first.description } (#{ values.length })" if values.first }
+            {{ buf.join " / " }}
+          </td>
+        </tr>
       % end
-    </tr>
-    <tr>
-      % data.each do |month, data|
-        <td>
-          % if data[:outputs].length == 0
-            0
-          % else
-            {{ (data[:outputs].map { |o| o.scale }.reduce(:+).to_f / data[:outputs].length).round(2) }}
-          % end
-        </td>
-      % end
-    </tr>
-    <tr>
-      % data.each do |month, data|
-        <td>
-          {{ data[:inputs].group_by { |i| i.type_id }.sort_by { |group, values| -values.length }.map { |group, values| "#{ values.first.description } (#{ values.length })" if values.first }.join("<br>") }}
-        </td>
-      % end
-    </tr>
+    </tbody>
   </table>
 % end
