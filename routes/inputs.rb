@@ -4,8 +4,7 @@ class Inputs < Cuba
       render("inputs/new", title: "New Input", types: current_user.types)
     end
 
-
-     on(":id") do |id|
+    on(":id") do |id|
       input = Input[id]
 
       on post, param("input") do |params|

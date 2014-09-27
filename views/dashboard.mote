@@ -1,4 +1,4 @@
-<h3>Dashboard resume statics<h3>
+<h2>Dashboard<h2>
 
 % statistics.each do |year, data|
   <h3>{{ year }}</h3>
