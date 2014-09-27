@@ -32,19 +32,19 @@ h3 {
   line-height: 1px;
 }
 
-.types {
+.forms {
   margin: 0 auto;
   width: 90%;
   line-height: 22px;
   position: relative;
 }
 
-.types a {
+.forms a {
   color: #373d62;
   text-decoration: none;
 }
 
-.types a,
+.forms a,
 td form input[type="submit"] {
   border: none;
   background-color: #373857;

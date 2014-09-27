@@ -1,4 +1,4 @@
-<div class="types">
+<div class="forms">
   <h2>Add a new type</h2>
   <form action="/types" method="POST">
     <fieldset>

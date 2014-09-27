@@ -1,6 +1,6 @@
 % user = params.fetch(:user)
 
-<div  class="types">
+<div  class="forms">
   <h2>Input Types</h2>
   <h2><a href="/types/new">Add New</a></h2>
 
