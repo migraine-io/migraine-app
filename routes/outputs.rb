@@ -1,9 +1,5 @@
 class Outputs < Cuba
   define do
-    on("new") do
-      render("outputs/new", title: "Output")
-    end
-
     on(":id") do |id|
       output = Output[id]
 
