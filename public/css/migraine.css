@@ -215,6 +215,10 @@ margin: 0 auto;
 -webkit-font-smoothing: antialiased;
 }
 
+td form {
+  display: inline;
+}
+
 .output {
   width: 60%;
   font-size: 15px;

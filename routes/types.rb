@@ -15,6 +15,12 @@ class Types < Cuba
       on get do
         render("types/edit", title: "Types Edit", type: type)
       end
+
+      on "delete", post do
+        type.delete
+
+        res.redirect("/types")
+      end
     end
 
     on post, param("type") do |params|
