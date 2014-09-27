@@ -1,10 +1,22 @@
 % user = params.fetch(:user)
 
 <div  class="forms">
-  <h2>Input Types</h2>
-  <h2><a href="/types/new">Add New</a></h2>
+  <form action="/types" method="POST">
+    <select name="type[category]">
+      <optgroup label="Category">
+        <option>Food</option>
+        <option>Drink</option>
+        <option>Symptoms</option>
+        <option>Body Changes</option>
+        <option>Medication</option>
+        <option>Other</option>
+      </optgroup>
+    </select>
+    <input type="text" name="type[name]" placeholder="Name">
+    <input type="submit" value="Save">
+  </form>
 
-    <table>
+  <table>
     <thead>
       <tr>
         <th>Category</th>
@@ -15,7 +27,7 @@
     <tbody>
       % user.types.each do |type|
         <tr>
-          <td>{{type.category}}</td>
+          <th>{{type.category}}</th>
           <td>{{type.name}}</td>
           <td class="action">
             <a href="/types/{{type.id}}/edit">Edit</a>

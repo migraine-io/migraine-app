@@ -1,8 +1,5 @@
 class Types < Cuba
   define do
-    on("new") do
-      render("types/new", title: "New Type")
-    end
 
     on(":id") do |id|
       type = Type[id]
