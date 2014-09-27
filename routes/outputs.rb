@@ -17,6 +17,12 @@ class Outputs < Cuba
       on get do
         render("outputs/edit", title: "Edit Output", output: output)
       end
+
+      on "delete", post do
+        output.delete
+
+        res.redirect("/outputs")
+      end
     end
 
     on post, param("output") do |params|
