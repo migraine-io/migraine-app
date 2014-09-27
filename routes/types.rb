@@ -27,8 +27,3 @@ class Types < Cuba
     end
   end
 end
-
-
-# on("edit") do
-#   render("types/edit", title: "Edit Type")
-# end
