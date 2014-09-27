@@ -7,7 +7,12 @@ DEFAULT_TYPES = YAML.load_file("./config/default_types.yml")
 
 Ohm.redis = Redic.new(ENV["REDIS_URL"])
 
-Malone.connect(url: ENV["SMTP_URL"], tls: true, domain: "migraine.io")
+Malone.connect host: ENV["SMTP_HOST"],
+               port: ENV["SMTP_PORT"],
+               user: ENV["SMTP_USER"],
+           password: ENV["SMTP_PASSWORD"],
+                tls: true,
+             domain: "migraine.io"
 
 Cuba.plugin(Mote::Render)
 Cuba.plugin(Shield::Helpers)
