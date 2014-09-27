@@ -5,9 +5,9 @@ Bundler.require
 
 DEFAULT_TYPES = YAML.load_file("./config/default_types.yml")
 
-Ohm.redis = Redic.new("redis://127.0.0.1:6379")
+Ohm.redis = Redic.new(ENV["REDIS_URL"])
 
-Malone.connect(url: "smtp://localhost:2525", tls: false, domain: "migraine.io")
+Malone.connect(url: ENV["SMTP_URL"], tls: true, domain: "migraine.io")
 
 Cuba.plugin(Mote::Render)
 Cuba.plugin(Shield::Helpers)
@@ -22,7 +22,7 @@ Cuba.plugin(Helpers)
 
 Cuba.use Rack::Session::Cookie,
   key: "migraine",
-  secret: "e357845bb2856de2f7e7ba5aff8dd5cd02167ab9c26df4a90cabe6f84f8e9190"
+  secret: ENV["SECRET"]
 
 Cuba.use Rack::Static,
   urls: %w[/js /css /img],
