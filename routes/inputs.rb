@@ -18,6 +18,12 @@ class Inputs < Cuba
       on get do
         render("inputs/edit", title: "Edit Input", input: input, user: current_user, types: current_user.types)
       end
+
+      on "delete", post do
+        input.delete
+
+        res.redirect("/inputs")
+      end
     end
 
     on post, param("input") do |params|
