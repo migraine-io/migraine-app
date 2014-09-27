@@ -15,7 +15,13 @@ p {
   line-height: 0;
 }
 
-
+hr.separator {
+  padding: 20px;
+  border: none;
+  border-bottom: 1px dotted silver;
+  margin: 0 auto;
+  width: 30%;
+}
 
 h2 {
   margin-top: 60px;
@@ -46,9 +52,9 @@ h3 {
 
 .forms a,
 td form input[type="submit"] {
-  border: none;
-  background-color: #373857;
-  color: white;
+  border: 1px solid silver;
+  background-color: white;
+  color: black;
   padding: 5px 10px;
   font-size: 14px;
   font-weight: bold;
@@ -59,6 +65,11 @@ td form input[type="submit"] {
   -webkit-appearance: none;
   margin: 0 5px;
   display: inline-block;
+}
+
+.forms a:hover,
+td form input[type="submit"]:hover {
+  background-color: silver;
 }
 
 a {
@@ -127,6 +138,24 @@ form {
   margin: 0 auto;
   padding: 0;
   border: 20px;
+}
+
+.forms form {
+  margin-top: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.forms select {
+  width: auto;
+  line-height: 20px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  padding: 5px;
+}
+
+.forms input[type=text] {
+  width: auto;
 }
 
 form input[type="submit"] {
@@ -198,7 +227,7 @@ select {
 }
 
 table {
-  margin: 50px auto;
+  margin: 30px auto;
   line-height: 22px;
   width: 80%;
   font-size: 16px;
@@ -211,15 +240,16 @@ table.statistics {
   font-size: 14px;
 }
 
-td,
-tr {
-border: 1px solid #0c090b;
-font-weight: normal;
-color: black;
-padding: 1px 4px;
-box-sizing: border-box;
-margin: 0 auto;
--webkit-font-smoothing: antialiased;
+td {
+  border-bottom: 1px solid silver;
+  border-left: 1px solid grey;
+  font-weight: normal;
+  color: black;
+  padding: 1px 4px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 22px;
 }
 
 td form {
@@ -238,13 +268,18 @@ td form {
   text-align: center;
 }
 
-
-th {
+thead th {
   text-align: left;
-  border: 1px solid #0c090b;
-  padding: 4px;
+  border-bottom: 2px solid #0c090b;
+  padding: 5px;
   -webkit-font-smoothing: antialiased;
   background-color: rgba(161, 170, 192, 0.1);
+}
+
+tbody th {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid silver;
 }
 
 .index p {
