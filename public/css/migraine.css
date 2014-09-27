@@ -32,26 +32,33 @@ h3 {
   line-height: 1px;
 }
 
-.profile_set {
+.types {
   margin: 0 auto;
   width: 90%;
   line-height: 22px;
   position: relative;
 }
 
-/*.profile_set nav {
-  position: absolute;
-  top: 2px;
-  right: 100px;
-}*/
-
-/*.profile_set nav li {
-  float: none;
-}*/
-
-.profile_set a {
+.types a {
   color: #373d62;
   text-decoration: none;
+}
+
+.types a,
+td form input[type="submit"] {
+  border: none;
+  background-color: #373857;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  margin: 0 5px;
+  display: inline-block;
 }
 
 a {
@@ -251,10 +258,6 @@ th {
   display: block;
 }
 
-.action {
-  text-align: center;
-}
-
 .error {
   display: block;
   margin-top: 50px;
@@ -272,4 +275,8 @@ th {
   color: red;
   line-height: 0;
   color: green;
+}
+
+.action {
+  width: 25%;
 }

@@ -1,6 +1,6 @@
 % user = params.fetch(:user)
 
-<div  class="profile_set">
+<div  class="types">
   <h2>Input Types</h2>
   <h2><a href="/types/new">Add New</a></h2>
 
@@ -19,7 +19,6 @@
           <td>{{type.name}}</td>
           <td class="action">
             <a href="/types/{{type.id}}/edit">Edit</a>
-            -
             <form action="/types/{{type.id}}/delete" method="POST">
               <input type="submit" value="Delete" />
             </form>
