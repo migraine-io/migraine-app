@@ -1,7 +1,6 @@
 % user = params.fetch(:user)
 
 <div class="profile">
-  <h2>Edit Profile</h2>
   % update_profile = params[:update_profile]
   % if update_profile
     % errors = update_profile.errors
@@ -24,11 +23,11 @@
       <label for="email">Email</label>
       <input id="email" type="text" name="user[email]" value="{{ user.email }}">
     </fieldset>
-    <input type="submit" value="Update">
+    <input type="submit" value="Update Profile">
   </form>
 
+  <hr class="separator" />
 
-  <h2>Change Password</h2>
   % update_password = params[:update_password]
   % if update_password
     % errors = update_password.errors
@@ -51,6 +50,6 @@
       <label for="password_confirmation">Password Confirmation</label>
       <input id="password_confirmation" type="password" name="password[password_confirmation]">
     </fieldset>
-    <input type="submit" value="Update">
+    <input type="submit" value="Update Password">
   </form>
 </div>
