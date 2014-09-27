@@ -12,19 +12,18 @@
 
     <tbody>
       % data.each do |month, month_data|
+        % outputs       = month_data.fetch(:outputs, [])
+        % inputs        = month_data.fetch(:inputs, [])
+        % total_scale   = outputs.map(&:scale).reduce(:+).to_i
+        % total_count   = outputs.length
+        % average_scale = (total_count == 0) ? 0 : total_scale.to_f / total_count
         <tr>
           <th>{{ Date::MONTHNAMES[month] }}</th>
-          <td>{{ month_data[:outputs].map(&:scale).reduce(:+).to_i }}</td>
-          <td>{{ month_data[:outputs].length }}</td>
+          <td>{{ total_scale }}</td>
+          <td>{{ total_count }}</td>
+          <td>{{ average_scale }}</td>
           <td>
-            % if month_data[:outputs].length == 0
-              0
-            % else
-              {{ (month_data[:outputs].map(&:scale).reduce(:+).to_f / month_data[:outputs].length).round(2) }}
-            % end
-          </td>
-          <td>
-            % buf = month_data[:inputs].group_by { |i| i.type_id }.sort_by { |group, values| -values.length }
+            % buf = inputs.group_by { |i| i.type_id }.sort_by { |group, values| -values.length }
             % buf = buf.map { |group, values| "#{ values.first.description } (#{ values.length })" if values.first }
             {{ buf.join " / " }}
           </td>

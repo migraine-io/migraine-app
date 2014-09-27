@@ -5,7 +5,7 @@ Bundler.require
 
 DEFAULT_TYPES = YAML.load_file("./config/default_types.yml")
 
-Ohm.redis = Redic.new(ENV["REDIS_URL"])
+Ohm.redis = Redic.new(ENV.fetch("REDIS_URL", "redis://127.0.0.1:6379"))
 
 Malone.connect host: ENV["SMTP_HOST"],
                port: ENV["SMTP_PORT"],
