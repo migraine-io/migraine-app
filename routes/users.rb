@@ -10,8 +10,8 @@ class Users < Cuba
       all_dates = output_dates + input_dates
       all_years = all_dates.map { |d| d.year }.sort
 
-      start_year = all_years.first
-      end_year   = all_years.last
+      start_year = all_years.first || Date.now.year
+      end_year   = all_years.last  || Date.now.year
 
       statistics = {}
       end_year.downto(start_year).each do |y|
