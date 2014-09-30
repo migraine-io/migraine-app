@@ -3,9 +3,9 @@
     <thead>
       <tr>
         <th width="10%">{{ year }}</th>
-        <th width="10%">TOS</th>
-        <th width="10%">TOC</th>
-        <th width="10%">TOA</th>
+        <th width="10%"><abbr title="Total Output Scale">TOS</abbr></th>
+        <th width="10%"><abbr title="Total Output Counter">TOC</abbr></th>
+        <th width="10%"><abbr title="Total Output Average">TOA</abbr></th>
         <th width="60%">Inputs</th>
       </tr>
     </thead>
